@@ -3,42 +3,51 @@ import "./Quiz.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
+// 문제번호
 function Quiz () {
     const [currentId, setCurrentId] = useState(1);
 
-    const add = () => {
-        setCurrentId(currentId + 1); 
-        if(currentId == 10) {
-            setCurrentId(10);
-        }
-    }
-
+    // 이전 버튼 누르면
     const sub = () => {
         setCurrentId(currentId - 1);
-        if(currentId == 1) {
+        if(currentId == 1) {  //문제 번호가 1번 전으로 가면
             setCurrentId(1);
         }
    }
+
+    //다음 버튼 누르면
+    const add = () => {
+        setCurrentId(currentId + 1); 
+        if(currentId == 10) {  //문제 번호가 10을 넘어가면
+            setCurrentId(10);
+        }
+    }
 
     return (
         <section id="contents">
             <div className="title">
                 <h1>OX퀴즈</h1>
+                {/* 문제 번호 */}
                 <div className="quiz_num">
                     {currentId}/10
                 </div>
             </div>
+
             <div className="wrapper">
+                {/* 퀴즈 내용 */}
                 <div className="quiz">
-                    {quizs[currentId-1].quiz}
+                    <p>{quizs[currentId-1].quiz}</p>
                 </div>
+
                 <div className="contents_wrapper">
                     <div className="button_wrapper">
+                        {/* O 버튼 */}
                         <div className="quiz_button1">
                             <a href="#">
                                 <button className="O">O</button>
                             </a>
                         </div>
+                        {/* X 버튼 */}
                         <div className="quiz_button2">
                             <a href="#">
                                 <button className="X">X</button>
@@ -48,6 +57,7 @@ function Quiz () {
                 </div>
                 <div className="contents_wrapper2">
                     <div className="button_wrapper down_wrapper">
+                        {/* 이전 버튼 */}
                         <div className="prev_button">
                             <button className="prev_button"
                             onClick={sub}>
@@ -55,14 +65,12 @@ function Quiz () {
                                 이전
                             </button>
                         </div>
+                        {/* 다음 버튼 */}
                         <div className="next_button">
-                            <button className="next_button"
-                            onClick={add}
-                          >
+                            <button className="next_button" onClick={add}>
                                 다음
                                 <FontAwesomeIcon icon={faChevronRight} />
                             </button>
-
                         </div>
                     </div>
                 </div>
@@ -128,11 +136,10 @@ const quizs = [
     },
     {
         id: 10,
-        quiz: "10. 다 먹은 컵라면 용기는 물에 씻어 스티로폼으로 배출한다",
+        quiz: "10. 다 먹은 컵라면 용기는 물에 씻어 스티로폼으로 배출한다.",
         answer: "X",
         summary: "스티로폼 재활용은 흰색만 가능합니다. 다 먹은 컵라면 용기를 물로만 세척한다면 라면국물이 다 빠지지 않기 때문에 재활용이 불가능해 일반쓰레기로 배출해야 합니다. 붉은 물이 들지 않은 컵라면 용기라면 재활용이 가능합니다. ",
     },
-
 ];
 
 export default Quiz;
