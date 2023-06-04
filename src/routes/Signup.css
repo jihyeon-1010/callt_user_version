@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#membership_contents{
+    width: 100%;
+    margin: 0;
+}
+
+.form-control {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-controlEmail{
+    flex-direction: row;
+}
+
+.form-control input {
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input[type="email"]{
+    width: 30%;
+}
+
+#password{
+    margin-bottom: 11px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.membership_form button {
+    cursor: pointer;
+    background-color: #38E07D;
+    border-style: none;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+

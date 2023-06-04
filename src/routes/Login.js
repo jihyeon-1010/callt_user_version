@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../img/logo.png";
 import "./Login.css";
 
-function Login (){
+function Login () {
     return (
         <section className="login_contents">
             <div className="login_wrapper">
@@ -33,9 +33,9 @@ function Login (){
                 
                 <div className="direction_wrapper">
                     {/* 비밀번호 찾기 */}
-                    <p className="forgot_pw"><a href="#">Forgot password?</a></p>
+                    <p className="forgot_pw"><a href="/forgot_pw">Forgot password?</a></p>
                     {/* 회원가입 */}
-                    <p className="sign_up">Don't have an account yet? <a href="#">Sign up</a></p>
+                    <p className="sign_up">Don't have an account yet? <a href="/signup">Sign up</a></p>
                 </div>
             </div>
         </section>

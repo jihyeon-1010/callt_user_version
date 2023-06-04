@@ -5,6 +5,9 @@ import Quiz from "./routes/Quiz";
 import Call from "./routes/Call";
 import Login from "./routes/Login";
 import Admin from "./routes/Admin";
+import Forgot_pw from "./routes/forgot_pw";
+import Signup from "./routes/Signup";
+import Location  from "./routes/Location";
 
 function App() {
   return(
@@ -15,6 +18,9 @@ function App() {
         <Route path="/call" element={<Call/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/admin" element={<Admin/>}/>
+        <Route path="signup" element={<Signup/>}/>
+        <Route path="/forgot_pw" element={<Forgot_pw />}/>
+        <Route path="/location" element={<Location/>}/>
       </Routes>
     </BrowserRouter>
   );

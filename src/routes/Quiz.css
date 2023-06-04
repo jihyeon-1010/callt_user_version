@@ -1,9 +1,6 @@
-#contents{
-    align-items: center;
-    justify-items: center;
-}
-.title{
-    margin: auto;
+.quiz_contents{
+    display: flex;
+    flex-direction: column;
 }
 .quiz{
     background-color: #ffffff;
@@ -15,8 +12,8 @@
     text-align: center;
 }
 .quiz_button1 button{
-    width:120px;
-    height: 120px;
+    width:138px;
+    height: 133px;
     margin-right: 1px;
     font-size: 2.75em;
     color: #AE3737;
@@ -26,8 +23,8 @@
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .quiz_button2 button{
-    width: 120px;
-    height: 120px;
+    width: 138px;
+    height: 133px;
     margin-left: 1px;
     font-size: 2.75em;
     color: #3775AE;
@@ -65,4 +62,14 @@
 }
 .quiz_num{
     text-align: center;
+}
+
+.wrapper{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.modal_background{
+    width: 100vh;
+    height: 100vh;
 }
