@@ -1,7 +1,8 @@
-.quiz_contents{
+#quiz_contents{
     display: flex;
     flex-direction: column;
 }
+
 .quiz{
     background-color: #ffffff;
     height: 100px;

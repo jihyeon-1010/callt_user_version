@@ -45,7 +45,7 @@ function Quiz () {
    
     return (
         
-        <section id="contents">
+        <section id="quiz_contents">
             <div className="title">
                 <h1>OX퀴즈</h1>
                 {/* 문제번호 */}
@@ -96,12 +96,14 @@ function Quiz () {
 
             </div>
             {isModal === true ? (
-                    <Modal 
-                        isModal={isModal} 
-                        info={quizs} 
-                        setIsModal={setIsModal} 
-                        id={currentId} 
-                        an={answer}/>
+                <>
+                <Modal 
+                    isModal={isModal} 
+                    info={quizs} 
+                    setIsModal={setIsModal} 
+                    id={currentId} 
+                    an={answer}/>
+                </>
                 ) : null}
         </section>
     );

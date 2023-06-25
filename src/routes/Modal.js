@@ -13,17 +13,19 @@ function Modal(props){
     const answer = props.an;
 
     return(
-        <div className="container">
-            <div className="modalBody">
-                <div className="checkAnswer">
-                    <span className="Answer">
-                    {answer == content[i - 1].answer ? (<span className="right">{`정답`}</span>) : (<span className="wrong">{`오답`}</span>)} 입니다!
-                    </span>
-                </div>
-                <div className="text">
-                    {content[i - 1].summary}
-                    <div>
-                        <button className="buttons" onClick={closeModal}>계속하기</button>
+        <div className="modal_bg">
+            <div className="container">
+                <div className="modalBody">
+                    <div className="checkAnswer">
+                        <span className="Answer">
+                        {answer == content[i - 1].answer ? (<span className="right">{`정답`}</span>) : (<span className="wrong">{`오답`}</span>)} 입니다!
+                        </span>
+                    </div>
+                    <div className="text">
+                        {content[i - 1].summary}
+                        <div>
+                            <button className="buttons" onClick={closeModal}>계속하기</button>
+                        </div>
                     </div>
                 </div>
             </div>
