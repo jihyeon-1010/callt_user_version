@@ -8,11 +8,9 @@
     height: 350px;
     border-radius: 10px;
     white-space: pre-wrap;
-    z-index: 20;
-    border: gray;
+    z-index: 10;
+    border-style: none;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
-    /* border-style: double; */
 }
 
 .modalBody{
@@ -41,31 +39,31 @@
 
 .text{
     font-family: "완주누리체 Regular";
-    text-align: center;
+
     color: black;
     font-size: 15px;
     line-height: 20px;
-    padding: 40px;
+    margin: 30px 20px 10px 20px;
+    height: 170px;
+}
 
+.text p { 
+    text-align: center;
 }
 
 .buttons{
     width: 250px;
     height: 45px;
-    padding: 5px;
     color: #ffffff;
-    font-size: 16ㅡpx;
+    font-size: 16px;
     border: none;
     border-radius: 100px;
     background-color: #38E07D;
-    margin-top: 40px;
 }
 .modal_bg {
-    width: 500vh;
-    height: 500vh;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: -1vh;
-    left: -10vh;
-    z-index: 10;
+    position: absolute ;
+    /* z-index: 10; */
 }

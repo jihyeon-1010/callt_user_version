@@ -1,8 +1,34 @@
 import React from "react";
-import logo from "../img/logo.png";
-import "./Main.css";
+import logo from "img/logo.png";
+import "routes/Main.css";
+import axios from "axios";
+import { Link } from 'react-router-dom';
 
 function Main () {
+  const handleCallButton = () => {
+  //   navigator.geolocation.getCurrentPosition(
+  //     position => {
+  //       const latitude = position.coords.latitude;
+  //       const longitude = position.coords.longitude;
+  //       sendUserLocation(latitude, longitude);
+  //     },
+  //     error => {
+  //       console.error("위치 정보를 가져올 수 없습니다.", error);
+  //     }
+  //   );
+  // };
+
+  // // 사용자의 위치 정보를 서버러 전달하는 코드
+  // const sendUserLocation = (latitude, longitude) => {
+  //   axios.post('/api/userLocation', { latitude, longitude })
+  //     .then(response => {
+  //       console.log('서버 응답: ', response.data);
+  //     })
+  //     .catch(error => {
+  //       console.error('오류 발생: ', error);
+  //     });
+  };
+    
   return (
     <section id="main_contents">
       <div className='wrapper'>
@@ -25,17 +51,16 @@ function Main () {
 
         {/* 호출하기 버튼 */}
         <div className="button1">
-          <a href="/call">
-            <button className="call"
-            >호출하기</button>
-          </a>
+          <Link to="/call">
+            <button className="call" onClick={handleCallButton}>호출하기</button>
+          </Link>
         </div>
 
         {/* 퀴즈풀기 버튼 */}
         <div className="button2">
-          <a href="/quiz">
+          <Link to="/quiz">
             <button className="quiz">퀴즈풀기</button>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

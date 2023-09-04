@@ -1,5 +1,5 @@
 import React from "react";
-import "./Call.css";
+import "routes/Call.css";
 
 function Call() {
     return(
