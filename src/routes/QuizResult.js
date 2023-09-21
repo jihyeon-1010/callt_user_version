@@ -2,7 +2,7 @@ import React from 'react'
 import 'routes/QuizResult.css';
 import { Link } from 'react-router-dom';
 
-function QuizResult({ count, restartQuiz }) {
+function QuizResult( {count, restartQuiz} ) {
   return (
     <div>
       <h2>퀴즈를 전부 완료했습니다!</h2>

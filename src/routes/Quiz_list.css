@@ -1,0 +1,26 @@
+#quizList_contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000000;
+} 
+
+.lv1, .lv2, .lv3, .lv4, .lv5, .lv6 {
+    width: 80%;;
+    height: 8%;
+    border-radius: 10px;
+    background-color: #aad7bd;
+    margin-bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-style: none;
+}
+
+a {
+    color: black
+}
+
+p {
+    font-size: 2dvb;
+}

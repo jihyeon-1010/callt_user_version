@@ -1,5 +1,6 @@
 import React from "react";
 import 'routes/Modal.css';
+import { Link } from "react-router-dom";
 
 function Modal(props){
     const closeModal = () => {

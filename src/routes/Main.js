@@ -1,34 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "img/logo.png";
 import "routes/Main.css";
 import axios from "axios";
 import { Link } from 'react-router-dom';
+import Call from "routes/Call";
 
 function Main () {
-  const handleCallButton = () => {
-  //   navigator.geolocation.getCurrentPosition(
-  //     position => {
-  //       const latitude = position.coords.latitude;
-  //       const longitude = position.coords.longitude;
-  //       sendUserLocation(latitude, longitude);
-  //     },
-  //     error => {
-  //       console.error("위치 정보를 가져올 수 없습니다.", error);
-  //     }
-  //   );
-  // };
+  // const [userLocation, setUserLocation] = useState(null);
 
-  // // 사용자의 위치 정보를 서버러 전달하는 코드
-  // const sendUserLocation = (latitude, longitude) => {
-  //   axios.post('/api/userLocation', { latitude, longitude })
-  //     .then(response => {
-  //       console.log('서버 응답: ', response.data);
-  //     })
-  //     .catch(error => {
-  //       console.error('오류 발생: ', error);
+  // const getUserLocation = () => {
+  //   if ("geolocation" in navigator) {
+  //     navigator.geolocation.getCurrentPosition(function (position) {
+  //       const { latitude, longitude } = position.coords;
+  //       setUserLocation({ latitude, longitude });
+  //       console.log(latitude, longitude)
   //     });
-  };
-    
+  //   } else {
+  //     console.log("Geolocation is not available in this browser.");
+  //   }
+  //   };
+
+  // useEffect(() => {
+  //   // Fetch user's location when the component mounts
+  //   getUserLocation();
+  // }, []);
+
+
   return (
     <section id="main_contents">
       <div className='wrapper'>
@@ -52,13 +49,13 @@ function Main () {
         {/* 호출하기 버튼 */}
         <div className="button1">
           <Link to="/call">
-            <button className="call" onClick={handleCallButton}>호출하기</button>
+            <button className="call" >호출하기</button>
           </Link>
         </div>
 
         {/* 퀴즈풀기 버튼 */}
         <div className="button2">
-          <Link to="/quiz">
+          <Link to="/quizList">
             <button className="quiz">퀴즈풀기</button>
           </Link>
         </div>
