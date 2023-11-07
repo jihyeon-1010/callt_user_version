@@ -9,7 +9,7 @@ import Quiz_list from "routes/Quiz_list";
 
 function App() {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route exact path="/" element={<Main/>}/>
         <Route exact path="/quiz/:level" element={<Quiz/>}/>

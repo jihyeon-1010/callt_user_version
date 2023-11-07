@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function App() {
+function Calling() {
   const [currentLocation, setCurrentLocation] = useState(null);
 
   useEffect(() => {
@@ -36,9 +36,8 @@ function App() {
       <h1>내 현재 위치 설정</h1>
       <button onClick={handleShowLocation}>내 현재 위치 호출하기</button>
       <br />
-      <input id="searchInput" type="text" placeholder="검색창" />
     </div>
   );
 }
 
-export default App;
+export default Calling;

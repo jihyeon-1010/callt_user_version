@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "routes/Call.css";
 
-function Call(location) {
+const Call = (location) => {
   const [userLocation, setUserLocation] = useState(null);
 
   const getUserLocation = () => {
@@ -80,9 +80,6 @@ function Call(location) {
     <section id="calling_wrapper">
       <div className="calling">
           <p><b>콜티를 호출하고 있습니다.</b><br />잠시만 기다려주세요~</p>
-      </div>
-      <div className="sv">
-        <button onClick={() => { send(); }}>보내기 버튼 생성!</button>
       </div>
     </section>
   );

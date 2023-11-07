@@ -5,25 +5,25 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 import Call from "routes/Call";
 
-function Main () {
-  // const [userLocation, setUserLocation] = useState(null);
+function Main() {
+  const [userLocation, setUserLocation] = useState(null);
 
-  // const getUserLocation = () => {
-  //   if ("geolocation" in navigator) {
-  //     navigator.geolocation.getCurrentPosition(function (position) {
-  //       const { latitude, longitude } = position.coords;
-  //       setUserLocation({ latitude, longitude });
-  //       console.log(latitude, longitude)
-  //     });
-  //   } else {
-  //     console.log("Geolocation is not available in this browser.");
-  //   }
-  //   };
+  const getUserLocation = () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        const { latitude, longitude } = position.coords;
+        setUserLocation({ latitude, longitude });
+        console.log(latitude, longitude)
+      });
+    } else {
+      console.log("Geolocation is not available in this browser.");
+    }
+    };
 
-  // useEffect(() => {
-  //   // Fetch user's location when the component mounts
-  //   getUserLocation();
-  // }, []);
+  useEffect(() => {
+    // Fetch user's location when the component mounts
+    getUserLocation();
+  }, []);
 
 
   return (
@@ -49,9 +49,10 @@ function Main () {
         {/* 호출하기 버튼 */}
         <div className="button1">
           <Link to="/call">
-            <button className="call" >호출하기</button>
+            <button className="call" onClick={getUserLocation}>호출하기</button>
           </Link>
         </div>
+        
 
         {/* 퀴즈풀기 버튼 */}
         <div className="button2">
