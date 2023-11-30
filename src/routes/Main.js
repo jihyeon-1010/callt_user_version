@@ -72,7 +72,7 @@ function Main () {
 
         {/* 퀴즈풀기 버튼 */}
         <div className="button2">
-          <Link to="/quiz">
+          <Link to="/quizList">
             <button className="quiz">퀴즈풀기</button>
           </Link>
         </div>
